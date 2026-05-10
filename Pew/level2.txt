@@ -1,0 +1,12 @@
+# This file is configured for
+# 200 x 120 Grid with PixelSize 6
+# Remember this means 200 in x-dir 120 in y-dir
+
+
+# Single Moving Object (Type,xPos,yPos)
+EXAMPLE,103,103
+
+# Three Wall Objects (Type,xPos,yPos,width,height)
+WALL,25,27,54,34
+WALL,120,50,25,10
+WALL,100,80,47,13
