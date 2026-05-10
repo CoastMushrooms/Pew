@@ -151,7 +151,7 @@ public class GamePanel extends JPanel {
 	  // Overview: Controls
 	  Font regularFont = new Font("Serif", Font.BOLD, 20);
 	  g.setFont(regularFont);
-	  g.setColor(Color.BLACK); // Pale Blue
+	  g.setColor(Color.WHITE); // Fixed: was BLACK on BLACK background
 	  g.drawString("Press arrows to move",3*pixelSize,50*pixelSize); // String, starting x, starting y
 	  g.drawString("Press space to fire",3*pixelSize,58*pixelSize);
 

@@ -98,7 +98,6 @@ public class Boss extends Element implements CollisionReactor {
 	    }
 
 		if (e instanceof Wall){
-			health.changeHealth(5);
 			xVelocity *= -1;
 	    }
 

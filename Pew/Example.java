@@ -181,6 +181,7 @@ public class Example extends Element implements CollisionReactor {
 
 		if(e instanceof blastEnemy){
 			health.changeHealth(7);
+			e.markToRemove(); // remove blast after it hits player
 		}
 	}
     /**

@@ -4,7 +4,6 @@
 
 
 # Single Moving Object (Type,xPos,yPos)
-BALL,2,2
 EXAMPLE,103,103
 
 

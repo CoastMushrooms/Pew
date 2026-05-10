@@ -14,7 +14,7 @@ public class blastEnemy extends Element{
     @Override
     public void update() {
         setX(getX()+xVelocity);
-        if (getX() > getGridCols()){
+        if (getX() < 0){
           markToRemove();
 
         }

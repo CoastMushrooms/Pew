@@ -74,7 +74,7 @@ public abstract class Element {
         return x + width;
     }
     public int getLeftEdge() {
-	        return x - width;
+	        return x;
     }
 
     public PixelMap getPixelMap() { return pixelMap; }

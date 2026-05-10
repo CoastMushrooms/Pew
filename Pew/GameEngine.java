@@ -69,15 +69,9 @@ public class GameEngine implements ActionListener, KeyListener, MouseListener {
      * Starts the main game loop using a Swing Timer.
      */
     public void start() {
-
-	  if (panel.isIntroMode()) // only do this once
-	    placeElementsOnIntroScreen();
-
-	    while (panel.isIntroMode()) // keep painting mode change
-	          panel.repaint();
-
-	    timer.start();  // begin the actual game
-	    startTime = System.currentTimeMillis();
+	  placeElementsOnIntroScreen();
+	  panel.repaint();  // show intro screen once; game starts on first key press
+	  // timer.start() is called by keyPressed when introMode is cleared
 	}
 
 	public void placeElementsOnIntroScreen(){
@@ -122,7 +116,7 @@ public class GameEngine implements ActionListener, KeyListener, MouseListener {
 	public int getEnding() {
 		if(player.getHealth() < 1)// check conditions such as score, timer, health, life
 			return 1;
-		if(currentLevel == 2){
+		if(currentLevel == 2 && boss != null){
 			if(boss.getHealth() < 1)
 				return 2;
 		}
@@ -143,9 +137,8 @@ public class GameEngine implements ActionListener, KeyListener, MouseListener {
 				twoTime = (System.currentTimeMillis() - startTime) / 1000;
 			}
 
-			if(twoTime % 3 == 0&& shots == 0){
-				shots = 0;
-				if(levelCount == 2 && shots == 0){
+			if(twoTime % 3 == 0 && shots == 0){
+				if(levelCount == 2){
 					Boss bs2 = (Boss)boss;
 					bs2.shootBlaster();
 					ArrayList<blastEnemy> blasts = bs2.getBlasts();
@@ -189,14 +182,6 @@ public class GameEngine implements ActionListener, KeyListener, MouseListener {
 	              //  ((CollisionReactor)el).reactToCollision(intersecting);
 	            }
 	            grid.placeElement(el);
-	            if (levelUp()){
-					elapsedTimeSec = 0;
-					startTime = System.currentTimeMillis();
-					if(currentLevel < 2){
-						System.out.println(currentLevel);
-						loadNextLevel();
-					}
-				}
 	        }
 
 			if(levelCount < 2){
@@ -288,6 +273,9 @@ public class GameEngine implements ActionListener, KeyListener, MouseListener {
 
         if (panel.isIntroMode()){
 		  panel.setIntroMode(false);
+		  LevelLoader.load("level1.txt", this);
+		  timer.start();
+		  startTime = System.currentTimeMillis();
 		  return;
 		}
     }

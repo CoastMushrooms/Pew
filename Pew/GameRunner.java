@@ -34,13 +34,7 @@ public class GameRunner {
         frame.addKeyListener(engine);
         frame.addMouseListener(engine);
 
-        // Load elements (like Ball and Wall) into the engine from a level file
-        // Format of level1.txt:
-        //   BALL,x,y
-        //   WALL,x,y,width,height
-        LevelLoader.load("level1.txt", engine);
-
-        // Start the game loop (runs updates and redraws screen continuously)
+        // Start shows the intro screen; the game loads and begins on first key press
         engine.start();
     }
 }
