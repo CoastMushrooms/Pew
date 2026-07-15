@@ -51,7 +51,7 @@ java GameRunner
 - LevelLoader.java         # Loads levels from .txt files
 - level1.txt               # Level 1 layout
 - level2.txt               # Level 2 layout
-└── level3.txt             # Level 3 layout (boss fight)
+- level3.txt             # Level 3 layout (boss fight)
 ```
 ## Levels
 
