@@ -29,28 +29,28 @@ java GameRunner
 ```
 ```
 ## Project Structure
-├── GameRunner.java        # Entry point
-├── GameEngine.java        # Game loop, input handling (Controller)
-├── GameGrid.java          # Game state grid (Model)
-├── GamePanel.java         # Rendering (View)
-├── Element.java           # Base class for all game objects
-├── Example.java           # Player character
-├── Enemy.java             # Standard enemy
-├── Boss.java              # Level 3 boss
-├── Blast.java             # Player projectile
-├── blastEnemy.java        # Enemy projectile
-├── Wall.java              # Destructible wall obstacle
-├── Coin.java              # Collectible element
-├── SpaceShip.java         # Alternate character template
-├── HealthBar.java         # Health tracking
-├── PixelMap.java          # Shape/sprite data
-├── PixelMapFactory.java   # Builds PixelMaps from string arrays
-├── Pixel.java             # Single colored grid cell
-├── InteractionHandler.java# Collision detection
-├── CollisionReactor.java  # Collision response interface
-├── LevelLoader.java       # Loads levels from .txt files
-├── level1.txt             # Level 1 layout
-├── level2.txt             # Level 2 layout
+- GameRunner.java          # Entry point
+- GameEngine.java          # Game loop, input handling (Controller)
+- GameGrid.java            # Game state grid (Model)
+- GamePanel.java           # Rendering (View)
+- Element.java             # Base class for all game objects
+- Example.java             # Player character
+- Enemy.java               # Standard enemy
+- Boss.java                # Level 3 boss
+- Blast.java               # Player projectile
+- blastEnemy.java          # Enemy projectile
+- Wall.java                # Destructible wall obstacle
+- Coin.java                # Collectible element
+- SpaceShip.java           # Alternate character template
+- HealthBar.java           # Health tracking
+- PixelMap.java            # Shape/sprite data
+- PixelMapFactory.java     # Builds PixelMaps from string arrays
+- Pixel.java               # Single colored grid cell
+- InteractionHandler.java  # Collision detection
+- CollisionReactor.java    # Collision response interface
+- LevelLoader.java         # Loads levels from .txt files
+- level1.txt               # Level 1 layout
+- level2.txt               # Level 2 layout
 └── level3.txt             # Level 3 layout (boss fight)
 ```
 ## Levels
