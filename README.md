@@ -27,7 +27,7 @@ javac *.java
 # Run
 java GameRunner
 ```
-
+```
 ## Project Structure
 ├── GameRunner.java&emsp;&emsp;        # Entry point<br>
 ├── GameEngine.java&emsp;&emsp;        # Game loop, input handling (Controller)<br>
@@ -52,7 +52,7 @@ java GameRunner
 ├── level1.txt&emsp;&emsp;             # Level 1 layout<br>
 ├── level2.txt&emsp;&emsp;             # Level 2 layout<br>
 └── level3.txt&emsp;&emsp;             # Level 3 layout (boss fight)<br>
-
+```
 ## Levels
 
 | Level | Description |
